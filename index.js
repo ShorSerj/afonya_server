@@ -1,10 +1,12 @@
+import data from './data.json'
 const express = require('express')
 const app = express()
+
 
 const PORT = process.env.PORT || 80
 
 app.get('/', (req,res) => {
-    res.end('<h1>Home Page</h1>')
+    res.json(data)
 })
 app.listen(PORT, () => {
     console.log('Server has been started...')
