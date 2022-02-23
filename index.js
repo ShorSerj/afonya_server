@@ -1,7 +1,9 @@
-const data = require('./data.json') 
 const express = require('express')
-const app = express()
+const cors = require('cors')
+const data = require('./data.json') 
 
+const app = express()
+app.use(cors())
 
 const PORT = process.env.PORT || 80
 
